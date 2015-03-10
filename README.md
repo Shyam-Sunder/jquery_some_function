@@ -1,3 +1,75 @@
-# jquery_some_function
-know about jquery function
- 
+# Explain the animate function.
+
+-The animate function is used to apply the custom animation effect to elements.
+
+-Syntax:
+
+$(selector).animate({params}, [duration], [easing], [callback])
+
+“param” defines the CSS properties on which you want to apply the animation.
+“duration” specify how long the animation will run. It can be one of following values : “slow”, “fast”, “normal” or milliseconds
+“easing” is the string which specify the function for the transition.
+“callback” is the function which we want to run once the animation effect is complete.
+
+# What is the use of param() method.
+
+The param() method is used to represent an array or an object in serialize manner.
+While making an ajax request we can use these serialize values in the query strings of URL.
+Syntax: $.param(object | array, boolValue)
+“object | array” specifies an array or an object to be serialized.
+“boolValue” specifies whether to use the traditional style of param serialization or not.
+For example:
+
+personObj=new Object();
+empObject.name="Arpit";
+empObject.age="24";
+empObject.dept=”IT”;
+$("#clickme").click(function(){
+$("span").text($.param(empObject));
+});
+It will set the text of span to “name=Arpit&age=24&dep=IT”
+
+# What is jQuery.holdReady() function?
+
+-By using jQuery.holdReady() function we can hold or release the execution of jQuery’s ready event.
+-This method should be call before we run ready event.
+-To delay the ready event, we have to call
+
+jQuery.holdReady(true);
+
+-When we want to release the ready event then we have to call
+jQuery.holdReady(false);
+-This function is helpful when we want to load any jQuery plugins before the execution of ready event.
+
+For example
+
+$.holdReady(true);
+$.getScript("xyzplugin.js", function() {
+$.holdReady(false);
+});
+
+# Explain .empty() vs .remove() vs .detach().
+
+-.empty() method is used to remove all the child elements from matched elements.
+-.remove() method is used to remove all the matched element. This method will remove all the jQuery data associated with the matched element.
+-.detach() method is same as .remove() method except that the .detach() method doesn’t remove jQuery data associated with the matched elements.
+-.remove() is faster than .empty() or .detach() method.
+
+Syntax:
+
+$(selector).empty();
+$(selector).remove();
+$(selector).detach();
+
+# How to read, write and delete cookies in jQuery?
+
+-To deal with cookies in jQuery we have to use the Dough cookie plugin.
+-Dough is easy to use and having powerful features.
+-Create cookie
+
+$.dough("cookie_name", "cookie_value");
+
+Read Cookie
+$.dough("cookie_name");
+Delete cookie
+$.dough("cookie_name", "remove");
