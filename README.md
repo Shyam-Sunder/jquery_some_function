@@ -112,7 +112,7 @@ $("[href$='.jpg']") can select all elements with an href attribute which will en
 
 Ajax allows the user to exchange data with a server and update parts of a page without reloading the entire page. Some of the functions of ajax are as follows:
 - $.ajax(): This is considered to be the most low level and basic of functions. It is used to send requests . This function can be performed without a selector. 
-- $.ajaxSetup(): This function is used to define and set the options for various ajax calls. 
+- $.ajaxSetup(): This function is used to define and set the options for various ajax calls 
 For ex. 
 $.ajaxSetup({ 
 "type":"POST", 
@@ -124,4 +124,4 @@ $("#bar")
 } 
 }); 
 - Shorthand ajax methods: They comprise of simply the wrapper function that call $.ajax() with certain parameters already set.
-- $.getJSON(): this is a special type of shorthand function which is used to accept the url to which the requests are sent. Also optional data and optional callback functions are possible in such functions.
+- $.getJSON(): this is a special type of shorthand function which is used to accept the url to which the requests are sent. Also optional data and optional callback functions are possible in such functions
