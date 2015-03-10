@@ -1,4 +1,4 @@
-#Explain the animate function.
+# Explain the animate function.
 
 -The animate function is used to apply the custom animation effect to elements.
 
@@ -11,7 +11,7 @@ $(selector).animate({params}, [duration], [easing], [callback])
 “easing” is the string which specify the function for the transition.
 “callback” is the function which we want to run once the animation effect is complete.
 
-#What is the use of param() method.
+# What is the use of param() method.
 
 The param() method is used to represent an array or an object in serialize manner.
 While making an ajax request we can use these serialize values in the query strings of URL.
@@ -29,7 +29,7 @@ $("span").text($.param(empObject));
 });
 It will set the text of span to “name=Arpit&age=24&dep=IT”
 
-#What is jQuery.holdReady() function?
+# What is jQuery.holdReady() function?
 
 -By using jQuery.holdReady() function we can hold or release the execution of jQuery’s ready event.
 -This method should be call before we run ready event.
@@ -48,7 +48,7 @@ $.getScript("xyzplugin.js", function() {
 $.holdReady(false);
 });
 
-#Explain .empty() vs .remove() vs .detach().
+# Explain .empty() vs .remove() vs .detach().
 
 -.empty() method is used to remove all the child elements from matched elements.
 -.remove() method is used to remove all the matched element. This method will remove all the jQuery data associated with the matched element.
@@ -61,7 +61,7 @@ $(selector).empty();
 $(selector).remove();
 $(selector).detach();
 
-#How to read, write and delete cookies in jQuery?
+# How to read, write and delete cookies in jQuery?
 
 -To deal with cookies in jQuery we have to use the Dough cookie plugin.
 -Dough is easy to use and having powerful features.
